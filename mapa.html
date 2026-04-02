@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mapa - Kaete Adventures</title>
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<link rel="stylesheet" href="style.css">
+<a href="como-chegar.html">🧭 Como chegar</a>
+
+<style>
+
+#map{
+height:100vh;
+width:100%;
+}
+
+.top-bar{
+
+position:absolute;
+top:10px;
+left:50%;
+transform:translateX(-50%);
+background:white;
+padding:10px 15px;
+border-radius:20px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+z-index:1000;
+
+}
+
+</style>
+
+</head>
+
+<body>
+         <button class="btn-voltar" onclick="voltarPagina()">
+ Voltar
+</button>
+
+    <div class="top-ui">
+    
+
+<input type="text" id="busca" placeholder="🔎 Buscar destino...">
+
+<select id="filtro">
+<option value="todos">🌎 Todos</option>
+<option value="eco">🌿 Ecoturismo</option>
+<option value="aventura">⛰ Aventura</option>
+<option value="cultural">🏛 Cultural</option>
+</select>
+
+</div>
+
+<div class="top-bar">
+🌿 Mapa de Ecoturismo
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="mapa.js"></script>
+<script>
+
+function voltarPagina(){
+history.back();
+}
+
+</script>
+
+</body>
+
+</html>

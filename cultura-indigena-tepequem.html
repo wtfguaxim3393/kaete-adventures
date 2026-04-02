@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cultura Indígena - Tepequém</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#0b175e;
+color:white;
+padding:15px;
+text-align:center;
+}
+
+.container{
+padding:20px;
+}
+
+.card{
+background:white;
+margin-bottom:20px;
+border-radius:15px;
+padding:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.galeria{
+display:flex;
+gap:10px;
+overflow:auto;
+}
+
+.galeria img{
+width:200px;
+border-radius:10px;
+}
+
+#map{
+height:300px;
+border-radius:15px;
+}
+
+.calendario{
+background:#e8f5e9;
+padding:10px;
+border-radius:10px;
+}
+
+.btn{
+display:block;
+text-align:center;
+background:#2615b9;
+color:white;
+padding:12px;
+border-radius:10px;
+text-decoration:none;
+margin-top:10px;
+}
+
+.btn-voltar{
+position:fixed;
+top:15px;
+left:15px;
+background:#150983;
+color:white;
+border:none;
+padding:10px;
+border-radius:10px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<button class="btn-voltar" onclick="history.back()">Voltar</button>
+
+<header>
+
+<h2>🌿 Cultura Indígena em Vila Tepequém</h2>
+<p>Experiência cultural e sustentável</p>
+
+</header>
+
+<div class="container">
+
+<!-- SOBRE -->
+
+<div class="card">
+
+<h3>🌎 Sobre a Cultura</h3>
+
+<p>
+A região de Vila Tepequém em Roraima possui forte presença de comunidades indígenas
+como Macuxi, Wapichana e Taurepang, que preservam tradições, artesanato,
+culinária e conexão com a natureza.
+O turismo sustentável promove o respeito e a valorização dessas culturas.
+</p>
+
+</div>
+
+<!-- GALERIA -->
+
+<div class="card">
+
+<h3>📸 Atividades Culturais</h3>
+
+<div class="galeria">
+
+<img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e">
+<img src="https://images.unsplash.com/photo-1519681393784-d120267933ba">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+
+</div>
+
+<ul>
+
+<li>🎨 Artesanato indígena</li>
+<li>🔥 Rituais tradicionais</li>
+<li>🌿 Trilhas guiadas</li>
+<li>🍲 Culinária típica</li>
+<li>🏹 Vivência cultural</li>
+
+</ul>
+
+</div>
+
+<!-- MAPA -->
+
+<div class="card">
+
+<h3>🗺️ Terras Indígenas Próximas</h3>
+
+<div id="map"></div>
+
+</div>
+
+<!-- CALENDÁRIO -->
+
+<div class="card">
+
+<h3>📅 Calendário de Atividades</h3>
+
+<div class="calendario">
+
+<p>Segunda - Artesanato indígena</p>
+<p>Quarta - Trilha cultural</p>
+<p>Sexta - Culinária tradicional</p>
+<p>Sábado - Vivência cultural</p>
+<p>Domingo - Ritual e histórias</p>
+
+</div>
+
+<a href="pagamento.html" class="btn">
+🎟️ Agendar experiência cultural
+</a>
+
+</div>
+
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+
+var map = L.map('map').setView([3.77, -61.72], 7);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
+.addTo(map);
+
+L.marker([3.77, -61.72])
+.addTo(map)
+.bindPopup("Vila Tepequém");
+
+L.marker([3.5, -61.5])
+.addTo(map)
+.bindPopup("Comunidades Macuxi");
+
+L.marker([3.6, -61.8])
+.addTo(map)
+.bindPopup("Comunidades Wapichana");
+
+L.marker([3.9, -61.6])
+.addTo(map)
+.bindPopup("Comunidades Taurepang");
+
+</script>
+
+</body>
+</html>

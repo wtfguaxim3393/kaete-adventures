@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pagamento - Kaete Adventures</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    
+
+<h2>💳 Reservar viagem</h2>
+     <button class="btn-voltar" onclick="voltarPagina()">
+ Voltar
+</button>
+
+<form class="pagamento">
+
+<label>Destino</label>
+
+<select>
+<option>Varginia - MT</option>
+<option>Nobres</option>
+<option>Serra do Roncador</option>
+</select>
+
+<label>Forma de pagamento</label>
+
+<select id="metodo" onchange="trocarMetodo()">
+
+<option value="cartao">Cartão</option>
+<option value="pix">Pix</option>
+<option value="carteira">Carteira digital</option>
+
+</select>
+
+<!-- CARTÃO -->
+<div id="cartao">
+
+<input type="text" placeholder="Nome no cartão">
+<input type="text" placeholder="Número do cartão">
+<input type="text" placeholder="Validade">
+<input type="text" placeholder="CVV">
+
+</div>
+
+<!-- PIX -->
+<div id="pix" style="display:none">
+
+<p>📱 Pague com Pix</p>
+
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=KaeteAdventuresPix">
+
+<p>Chave Pix: kaete@adventures.com</p>
+
+</div>
+
+<!-- CARTEIRA DIGITAL -->
+<div id="carteira" style="display:none">
+
+<p>💼 Escolha sua carteira digital</p>
+
+<button type="button">Google Pay</button>
+<button type="button">Apple Pay</button>
+<button type="button">Mercado Pago</button>
+
+</div>
+
+<label>🌱 Doação ambiental</label>
+
+<select>
+<option>Não doar</option>
+<option>Doar R$5</option>
+<option>Doar R$10</option>
+</select>
+
+<button type="submit">Finalizar pagamento</button>
+
+</form>
+
+<script>
+
+function trocarMetodo(){
+
+let metodo = document.getElementById("metodo").value
+
+document.getElementById("cartao").style.display = "none"
+document.getElementById("pix").style.display = "none"
+document.getElementById("carteira").style.display = "none"
+
+document.getElementById(metodo).style.display = "block"
+
+}
+
+
+
+</script>
+
+<script>
+
+function voltarPagina(){
+history.back();
+}
+
+</script>
+</body>
+
+</html>
