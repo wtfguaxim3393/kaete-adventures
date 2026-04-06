@@ -120,7 +120,7 @@ Adicione prints aqui:
 
 ## 👨‍💻 Autor
 
-**Lucas Cavalcante**
+**Lorenna do Nascimento**
 
 GitHub:  
 https://github.com/wtfguaxim3393
