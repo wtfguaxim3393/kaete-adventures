@@ -9,11 +9,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var destinos = [
 
 {
-nome:"Vila Tepequém - RR",
-lat:3.77,
-lng:-61.72,
-tipo:"eco",
-nota:4.9,
+nome: "Vila Tepequém",
+lat: 3.77,
+lng: -61.72,
+categoria: "cultural",
+nota : 4.9,
 img:"https://al.rr.leg.br/wp-content/uploads/2024/07/DIRETO-SITE-14.jpg",
 desc:"🌄 Cachoeiras e natureza preservada"
 },

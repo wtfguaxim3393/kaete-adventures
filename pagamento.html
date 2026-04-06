@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
 
@@ -12,20 +12,23 @@
 
 </head>
 
-<body>
-    
+<body class="pag-bg">
+
+<button class="btn-voltar" onclick="voltarPagina()">
+← Voltar
+</button>
+
+<div class="pag-container">
 
 <h2>💳 Reservar viagem</h2>
-     <button class="btn-voltar" onclick="voltarPagina()">
- Voltar
-</button>
+<p class="sub">Finalize sua reserva com segurança</p>
 
 <form class="pagamento">
 
 <label>Destino</label>
 
 <select>
-<option>Varginia - MT</option>
+<option>Vila Tepequém</option>
 <option>Nobres</option>
 <option>Serra do Roncador</option>
 </select>
@@ -41,48 +44,53 @@
 </select>
 
 <!-- CARTÃO -->
-<div id="cartao">
+<div id="cartao" class="box">
 
 <input type="text" placeholder="Nome no cartão">
 <input type="text" placeholder="Número do cartão">
-<input type="text" placeholder="Validade">
+<input type="text" placeholder="Validade (MM/AA)">
 <input type="text" placeholder="CVV">
 
 </div>
 
 <!-- PIX -->
-<div id="pix" style="display:none">
+<div id="pix" class="box hidden">
 
 <p>📱 Pague com Pix</p>
 
 <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=KaeteAdventuresPix">
 
-<p>Chave Pix: kaete@adventures.com</p>
+<p class="pix-chave">Chave Pix: kaete@adventures.com</p>
 
 </div>
 
 <!-- CARTEIRA DIGITAL -->
-<div id="carteira" style="display:none">
+<div id="carteira" class="box hidden">
 
 <p>💼 Escolha sua carteira digital</p>
 
-<button type="button">Google Pay</button>
-<button type="button">Apple Pay</button>
-<button type="button">Mercado Pago</button>
+<button type="button" class="wallet">Google Pay</button>
+<button type="button" class="wallet">Apple Pay</button>
+<button type="button" class="wallet">Mercado Pago</button>
 
 </div>
 
 <label>🌱 Doação ambiental</label>
 
-<select>
+<select class="doacao">
 <option>Não doar</option>
 <option>Doar R$5</option>
 <option>Doar R$10</option>
+<option>Doar R$20</option>
 </select>
 
-<button type="submit">Finalizar pagamento</button>
+<button class="finalizar" type="submit">
+Finalizar pagamento
+</button>
 
 </form>
+
+</div>
 
 <script>
 
@@ -90,11 +98,11 @@ function trocarMetodo(){
 
 let metodo = document.getElementById("metodo").value
 
-document.getElementById("cartao").style.display = "none"
-document.getElementById("pix").style.display = "none"
-document.getElementById("carteira").style.display = "none"
+document.getElementById("cartao").classList.add("hidden")
+document.getElementById("pix").classList.add("hidden")
+document.getElementById("carteira").classList.add("hidden")
 
-document.getElementById(metodo).style.display = "block"
+document.getElementById(metodo).classList.remove("hidden")
 
 }
 
@@ -109,6 +117,7 @@ history.back();
 }
 
 </script>
+
 </body>
 
 </html>

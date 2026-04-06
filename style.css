@@ -369,8 +369,145 @@ transition:0.3s;
 
 }
 
-.btn-voltar:hover{
+/* ===== CULTURA INDIGENA RESPONSIVO ===== */
 
-background:#1b5e20;
+.cultura-header{
+    background:#0b175e;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
 
+.container{
+    padding:20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    margin-bottom:20px;
+    border-radius:15px;
+    padding:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* galeria */
+
+
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width:768px){
+
+    .container{
+        padding:15px;
+    }
+
+    .galeria img{
+        width:160px;
+        height:120px;
+    }
+
+    .card{
+        padding:12px;
+    }
+
+    #map{
+        height:250px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .cultura-header h2{
+        font-size:18px;
+    }
+
+    .cultura-header p{
+        font-size:14px;
+    }
+
+    .galeria{
+        gap:8px;
+    }
+
+    .galeria img{
+        width:140px;
+        height:100px;
+    }
+
+    .btn{
+        padding:12px;
+        font-size:14px;
+    }
+
+    #map{
+        height:220px;
+    }
+
+}
+
+/* ===== ESPAÇAMENTO DESTINOS ===== */
+
+.destino-box{
+    margin-bottom:40px;
+}
+
+.botao-reserva{
+    display:block;
+    background:#2e367d;
+    color:white;
+    padding:15px;
+    text-align:center;
+    border-radius:10px;
+    text-decoration:none;
+    margin-top:20px;
+    margin-bottom:30px;
+    transition:0.3s;
+}
+
+.botao-reserva:hover{
+    background:#1b2457;
+}
+
+.foto-destino{
+    margin-top:20px;
+    border-radius:10px;
+}
+
+/* espaço entre seções */
+.conteudo{
+    padding:20px;
+    max-width:900px;
+    margin:auto;
+}
+.icone-cultura{
+    display:block;
+    background:#1b5e20;
+    color:white;
+    padding:12px;
+    margin:15px;
+    text-align:center;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.icone-cultura:hover{
+    background:#2e7d32;
+}
+
+.menu a{
+    font-size:22px;
+    text-decoration:none;
+    color:#2e367d;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    transform:scale(1.2);
+    color:#1b5e20;
 }
