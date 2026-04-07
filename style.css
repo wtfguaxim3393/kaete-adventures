@@ -511,3 +511,114 @@ transition:0.3s;
     transform:scale(1.2);
     color:#1b5e20;
 }
+/* =========================
+   DESTINOS RESPONSIVO
+========================= */
+
+.foto-destino{
+    width:100%;
+    max-width:900px;
+    display:block;
+    margin:auto;
+    border-radius:10px;
+}
+
+.conteudo{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+.conteudo h2{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.conteudo h3{
+    font-size:22px;
+    margin-top:15px;
+}
+
+.conteudo p{
+    font-size:18px;
+    line-height:1.6;
+    text-align:justify;
+}
+
+.conteudo ul{
+    margin-left:20px;
+    font-size:18px;
+}
+
+.botao-reserva{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 20px;
+    background:#2e3f8b;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+.btn-voltar{
+    position:fixed;
+    top:15px;
+    left:15px;
+    padding:10px 15px;
+    background:#333;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media(max-width:768px){
+
+    .conteudo{
+        padding:15px;
+    }
+
+    .conteudo h2{
+        font-size:22px;
+    }
+
+    .conteudo h3{
+        font-size:18px;
+    }
+
+    .conteudo p{
+        font-size:16px;
+    }
+
+    .conteudo ul{
+        font-size:16px;
+    }
+
+    .botao-reserva{
+        width:100%;
+        text-align:center;
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .conteudo h2{
+        font-size:20px;
+    }
+
+    .conteudo h3{
+        font-size:17px;
+    }
+
+    .conteudo p{
+        font-size:15px;
+    }
+
+}
